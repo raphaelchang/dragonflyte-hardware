@@ -1,0 +1,153 @@
+Protel Design System Design Rule Check
+PCB File : \\vmware-host\Shared Folders\Downloads\tinytof-hardware\TinyTOF-Body\TinyTOF-Body.PcbDoc
+Date     : 11/25/2017
+Time     : 6:45:55 AM
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP4'))
+   Violation between Matched Net Lengths: Between Net DRAM_DQS3_P And Net DRAM_D30 Length:607.426mil is not within 25mil tolerance of Length:945.235mil (312.808mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQS3_N And Net DRAM_D30 Length:537.871mil is not within 25mil tolerance of Length:945.235mil (382.364mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQM3 And Net DRAM_D30 Length:750.802mil is not within 25mil tolerance of Length:945.235mil (169.433mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D31 And Net DRAM_D30 Length:714.038mil is not within 25mil tolerance of Length:945.235mil (206.196mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D29 And Net DRAM_D30 Length:796.213mil is not within 25mil tolerance of Length:945.235mil (124.022mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D28 And Net DRAM_D30 Length:632.623mil is not within 25mil tolerance of Length:945.235mil (287.611mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D27 And Net DRAM_D30 Length:747.863mil is not within 25mil tolerance of Length:945.235mil (172.372mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D26 And Net DRAM_D30 Length:660.833mil is not within 25mil tolerance of Length:945.235mil (259.402mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D25 And Net DRAM_D30 Length:802.711mil is not within 25mil tolerance of Length:945.235mil (117.524mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D24 And Net DRAM_D30 Length:801.184mil is not within 25mil tolerance of Length:945.235mil (119.051mil short) 
+Rule Violations :10
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP3'))
+   Violation between Matched Net Lengths: Between Net DRAM_DQS2_P And Net DRAM_D18 Length:682.97mil is not within 25mil tolerance of Length:1008.035mil (300.066mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQS2_N And Net DRAM_D18 Length:743.973mil is not within 25mil tolerance of Length:1008.035mil (239.062mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQM2 And Net DRAM_D18 Length:824.104mil is not within 25mil tolerance of Length:1008.035mil (158.931mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D23 And Net DRAM_D18 Length:930.738mil is not within 25mil tolerance of Length:1008.035mil (52.297mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D22 And Net DRAM_D18 Length:823.388mil is not within 25mil tolerance of Length:1008.035mil (159.648mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D21 And Net DRAM_D18 Length:930.939mil is not within 25mil tolerance of Length:1008.035mil (52.096mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D20 And Net DRAM_D18 Length:956.12mil is not within 25mil tolerance of Length:1008.035mil (26.915mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D19 And Net DRAM_D18 Length:869.168mil is not within 25mil tolerance of Length:1008.035mil (113.868mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D17 And Net DRAM_D18 Length:920.267mil is not within 25mil tolerance of Length:1008.035mil (62.769mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D16 And Net DRAM_D18 Length:848.589mil is not within 25mil tolerance of Length:1008.035mil (134.446mil short) 
+Rule Violations :10
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP2'))
+   Violation between Matched Net Lengths: Between Net DRAM_DQS1_P And Net DRAM_D15 Length:713.809mil is not within 25mil tolerance of Length:863.837mil (125.028mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQS1_N And Net DRAM_D15 Length:748.293mil is not within 25mil tolerance of Length:863.837mil (90.543mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQM1 And Net DRAM_D15 Length:747.677mil is not within 25mil tolerance of Length:863.837mil (91.16mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D12 And Net DRAM_D15 Length:817.451mil is not within 25mil tolerance of Length:863.837mil (21.386mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D11 And Net DRAM_D15 Length:822.831mil is not within 25mil tolerance of Length:863.837mil (16.006mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D10 And Net DRAM_D15 Length:808.856mil is not within 25mil tolerance of Length:863.837mil (29.981mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D9 And Net DRAM_D15 Length:785.302mil is not within 25mil tolerance of Length:863.837mil (53.535mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D8 And Net DRAM_D15 Length:732.919mil is not within 25mil tolerance of Length:863.837mil (105.918mil short) 
+Rule Violations :8
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP1'))
+   Violation between Matched Net Lengths: Between Net DRAM_DQS0_P And Net DRAM_D7 Length:568.454mil is not within 25mil tolerance of Length:866.538mil (273.084mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQS0_N And Net DRAM_D7 Length:575.116mil is not within 25mil tolerance of Length:866.538mil (266.422mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_DQM0 And Net DRAM_D7 Length:778.911mil is not within 25mil tolerance of Length:866.538mil (62.627mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D6 And Net DRAM_D7 Length:768.995mil is not within 25mil tolerance of Length:866.538mil (72.543mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D5 And Net DRAM_D7 Length:683.174mil is not within 25mil tolerance of Length:866.538mil (158.364mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D4 And Net DRAM_D7 Length:574.617mil is not within 25mil tolerance of Length:866.538mil (266.921mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D2 And Net DRAM_D7 Length:620.119mil is not within 25mil tolerance of Length:866.538mil (221.419mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D1 And Net DRAM_D7 Length:725.983mil is not within 25mil tolerance of Length:866.538mil (115.555mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_D0 And Net DRAM_D7 Length:645.496mil is not within 25mil tolerance of Length:866.538mil (196.042mil short) 
+Rule Violations :9
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+   Violation between Net Antennae: Via (6765mil,1665mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6284.135mil,1599.409mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5951.456mil,1420.275mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6284.135mil,1445.866mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5900.275mil,1752.954mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5951.456mil,1445.866mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5900.275mil,1727.363mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5900.275mil,1701.772mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5900.275mil,1548.228mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5925.865mil,1727.363mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5925.865mil,1701.772mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1727.363mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1522.637mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1701.772mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1548.228mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1676.182mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1573.818mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1650.591mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6232.953mil,1599.409mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6207.363mil,1599.409mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6028.228mil,1548.228mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6028.228mil,1573.818mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6053.818mil,1548.228mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6028.228mil,1650.591mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6028.228mil,1599.409mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6130.591mil,1548.228mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6079.409mil,1548.228mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6053.818mil,1573.818mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6053.818mil,1650.591mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6053.818mil,1599.409mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6130.591mil,1573.818mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6079.409mil,1573.818mil) from Component Side to Solder Side 
+Rule Violations :32
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=3mil) (Max=20mil) (Preferred=5mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM'))
+   Violation between Matched Net Lengths: Between Net DRAM_WE And Net DRAM_SDBA0 Length:668.243mil is not within 25mil tolerance of Length:741.654mil (48.411mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_SDBA2 And Net DRAM_SDBA0 Length:594.82mil is not within 25mil tolerance of Length:741.654mil (121.835mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_CAS And Net DRAM_SDBA0 Length:704.834mil is not within 25mil tolerance of Length:741.654mil (11.821mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A14 And Net DRAM_SDBA0 Length:543.538mil is not within 25mil tolerance of Length:741.654mil (173.116mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_SDBA0 Length:560.371mil is not within 25mil tolerance of Length:741.654mil (156.284mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A12 And Net DRAM_SDBA0 Length:673.951mil is not within 25mil tolerance of Length:741.654mil (42.703mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A11 And Net DRAM_SDBA0 Length:599.463mil is not within 25mil tolerance of Length:741.654mil (117.191mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A9 And Net DRAM_SDBA0 Length:631.63mil is not within 25mil tolerance of Length:741.654mil (85.024mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A7 And Net DRAM_SDBA0 Length:699.412mil is not within 25mil tolerance of Length:741.654mil (17.243mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A6 And Net DRAM_SDBA0 Length:616.365mil is not within 25mil tolerance of Length:741.654mil (100.29mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A5 And Net DRAM_SDBA0 Length:622.117mil is not within 25mil tolerance of Length:741.654mil (94.538mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A4 And Net DRAM_SDBA0 Length:639.266mil is not within 25mil tolerance of Length:741.654mil (77.388mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A3 And Net DRAM_SDBA0 Length:714.413mil is not within 25mil tolerance of Length:741.654mil (2.242mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A2 And Net DRAM_SDBA0 Length:670.12mil is not within 25mil tolerance of Length:741.654mil (46.534mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A1 And Net DRAM_SDBA0 Length:622.835mil is not within 25mil tolerance of Length:741.654mil (93.819mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A0 And Net DRAM_SDBA0 Length:653.939mil is not within 25mil tolerance of Length:741.654mil (62.715mil short) 
+Rule Violations :16
+
+Processing Rule : Matched Lengths(Tolerance=10mil) ((InNetClass('DRAM_ADDR_COMM') OR InNetClass('DRAM_GROUP1') OR InNetClass('DRAM_GROUP2') OR InNetClass('DRAM_GROUP3') OR InNetClass('DRAM_GROUP4')))
+   Violation between Matched Net Lengths: Between Net DRAM_DQS3_P And Net DRAM_DQS3_N Actual Difference against DRAM_DQS3_N is: 69.556mil, Tolerance : 10mil. 
+   Violation between Matched Net Lengths: Between Net DRAM_DQS2_P And Net DRAM_DQS2_N Actual Difference against DRAM_DQS2_N is: 61.004mil, Tolerance : 10mil. 
+   Violation between Matched Net Lengths: Between Net DRAM_DQS1_P And Net DRAM_DQS1_N Actual Difference against DRAM_DQS1_N is: 34.484mil, Tolerance : 10mil. 
+Rule Violations :3
+
+Processing Rule : Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))
+   Violation between Matched Net Lengths: Between Net DRAM_SDODT And Net DRAM_SDCKE Length:1056.405mil is not within 50mil tolerance of Length:1214.907mil (108.501mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_CS And Net DRAM_SDCKE Length:997.362mil is not within 50mil tolerance of Length:1214.907mil (167.544mil short) 
+Rule Violations :2
+
+Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))
+   Violation between Matched Net Lengths: Between Net DRAM_CLK_P And Net DRAM_CLK_N Actual Difference against DRAM_CLK_N is: 34.718mil, Tolerance : 5mil. 
+Rule Violations :1
+
+
+Violations Detected : 91
+Time Elapsed        : 00:00:03
