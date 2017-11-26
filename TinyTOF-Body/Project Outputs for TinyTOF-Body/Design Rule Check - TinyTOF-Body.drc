@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : \\vmware-host\Shared Folders\Downloads\tinytof-hardware\TinyTOF-Body\TinyTOF-Body.PcbDoc
 Date     : 11/26/2017
-Time     : 3:14:38 AM
+Time     : 3:59:46 AM
 
 Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))
 Rule Violations :0
@@ -67,4 +67,4 @@ Rule Violations :0
 
 
 Violations Detected : 8
-Time Elapsed        : 00:00:08
+Time Elapsed        : 00:00:05
