@@ -1,5 +1,6 @@
-Dragonflyte Hardware
-====================
+<img align="right" height="90" src="https://raphaelchang.com/wp-content/uploads/Dragonflyte.png">
+
+# Dragonflyte Hardware
 
 Hardware designs for Dragonflyte flight computer
 
