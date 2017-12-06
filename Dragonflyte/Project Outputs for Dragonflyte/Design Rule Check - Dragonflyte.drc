@@ -1,0 +1,70 @@
+Protel Design System Design Rule Check
+PCB File : \\vmware-host\Shared Folders\Downloads\tinytof-hardware\TinyTOF-Body\TinyTOF-Body.PcbDoc
+Date     : 11/26/2017
+Time     : 4:31:55 AM
+
+Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=10mil) ((InNetClass('DRAM_ADDR_COMM') OR InNetClass('DRAM_GROUP1') OR InNetClass('DRAM_GROUP2') OR InNetClass('DRAM_GROUP3') OR InNetClass('DRAM_GROUP4')))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM'))
+Rule Violations :0
+
+Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Short-Circuit Constraint: Between Track (6142.52mil,1561.024mil)(6155.316mil,1548.228mil) on Component Side And Pad U1-H2(6142.52mil,1561.024mil) on Component Side Location : [X = 6143.637mil][Y = 1559.907mil]
+Rule Violations :1
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=3mil) (Max=20mil) (Preferred=5mil) (All)
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=100mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+   Violation between Net Antennae: Via (6027.363mil,1599.409mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5745.865mil,1701.772mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5745.865mil,1727.363mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5720.275mil,1701.772mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5720.275mil,1727.363mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (5720.275mil,1752.954mil) from Component Side to Solder Side 
+   Violation between Net Antennae: Via (6104.135mil,1599.409mil) from Component Side to Solder Side 
+Rule Violations :7
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP2'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP3'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP4'))
+Rule Violations :0
+
+
+Violations Detected : 8
+Time Elapsed        : 00:00:05
