@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc
-Date     : 1/3/2018
-Time     : 1:46:06 AM
+Date     : 1/6/2018
+Time     : 2:48:23 PM
 
 WARNING: Unplated multi-layer pad(s) detected
    Pad MK1-4(640mil,535.197mil) on Multi-Layer on Net GND
@@ -59,15 +59,10 @@ Processing Rule : Net Antennae (Tolerance=0mil) (All)
    Violation between Net Antennae: Via (131.278mil,509.863mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (131.278mil,535.453mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (131.278mil,561.044mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (155mil,-655mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (156.869mil,381.909mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (156.869mil,433.091mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (156.869mil,458.682mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (180mil,-655mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (205mil,-655mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (208.05mil,561.044mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (230mil,-655mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (255mil,-655mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (259.231mil,305.137mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (259.231mil,535.453mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (259.231mil,561.044mil) from Component Side to Solder Side 
@@ -79,7 +74,6 @@ Processing Rule : Net Antennae (Tolerance=0mil) (All)
    Violation between Net Antennae: Via (387.185mil,535.453mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (412.776mil,561.044mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (438.366mil,612.225mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (590mil,-620mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (641.142mil,38.977mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (730mil,-102.539mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (80.097mil,433.091mil) from Component Side to Solder Side 
@@ -87,7 +81,7 @@ Processing Rule : Net Antennae (Tolerance=0mil) (All)
    Violation between Net Antennae: Via (80.097mil,484.272mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (80.097mil,509.863mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (80.097mil,535.453mil) from Component Side to Solder Side 
-Rule Violations :47
+Rule Violations :41
 
 Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
 Rule Violations :0
@@ -121,6 +115,6 @@ Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (
 Rule Violations :0
 
 
-Violations Detected : 57
+Violations Detected : 51
 Waived Violations : 0
 Time Elapsed        : 00:00:01
