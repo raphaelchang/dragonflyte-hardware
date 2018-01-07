@@ -1,33 +1,30 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc
 Date     : 1/6/2018
-Time     : 2:48:23 PM
+Time     : 10:27:22 PM
 
 WARNING: Unplated multi-layer pad(s) detected
-   Pad MK1-4(640mil,535.197mil) on Multi-Layer on Net GND
-   Pad MK2-4(-640mil,535.197mil) on Multi-Layer on Net GND
-   Pad MK3-4(-640mil,-535.197mil) on Multi-Layer on Net GND
    Pad MK4-4(640mil,-535.197mil) on Multi-Layer on Net GND
+   Pad MK3-4(-640mil,-535.197mil) on Multi-Layer on Net GND
+   Pad MK2-4(-640mil,535.197mil) on Multi-Layer on Net GND
+   Pad MK1-4(640mil,535.197mil) on Multi-Layer on Net GND
 
 Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
-   Violation between Clearance Constraint: (0.039mil < 4mil) Between Pad U13-1(456.929mil,-588.386mil) on Solder Side And Via (430.315mil,-585.315mil) from Component Side to Solder Side 
-   Violation between Clearance Constraint: (0.866mil < 4mil) Between Pad U13-1(456.929mil,-588.386mil) on Solder Side And Via (450mil,-605mil) from Component Side to Solder Side 
-   Violation between Clearance Constraint: (Collision < 4mil) Between Pad U13-1(456.929mil,-588.386mil) on Solder Side And Via (469.685mil,-585.315mil) from Component Side to Solder Side 
    Violation between Clearance Constraint: (Collision < 4mil) Between Pad U1-H17(220.846mil,573.839mil) on Component Side And Track (208.05mil,586.635mil)(220.846mil,573.839mil) on Component Side 
    Violation between Clearance Constraint: (2.953mil < 4mil) Between Pad U5-6(-230mil,287.362mil) on Component Side And Via (-208.346mil,290mil) from Component Side to Solder Side 
    Violation between Clearance Constraint: (2.953mil < 4mil) Between Pad U5-6(-230mil,287.362mil) on Component Side And Via (-251.654mil,290mil) from Component Side to Solder Side 
-Rule Violations :6
+Rule Violations :3
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
-   Violation between Short-Circuit Constraint: Between Pad U13-1(456.929mil,-588.386mil) on Solder Side And Via (469.685mil,-585.315mil) from Component Side to Solder Side Location : [X = 4591.709mil][Y = 1556.614mil]
    Violation between Short-Circuit Constraint: Between Pad U1-H17(220.846mil,573.839mil) on Component Side And Track (208.05mil,586.635mil)(220.846mil,573.839mil) on Component Side Location : [X = 4344.729mil][Y = 2719.956mil]
-Rule Violations :2
+Rule Violations :1
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
 
 Processing Rule : Width Constraint (Min=3mil) (Max=20mil) (Preferred=5mil) (All)
-Rule Violations :0
+   Violation between Width Constraint: Track (-100.866mil,-243.858mil)(-95mil,-243.858mil) on Solder Side Actual Width = 0mil, Target Width = 3mil
+Rule Violations :1
 
 Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
 Rule Violations :0
@@ -48,6 +45,8 @@ Processing Rule : Net Antennae (Tolerance=0mil) (All)
    Violation between Net Antennae: Arc (-640mil,535.197mil) on Component Side 
    Violation between Net Antennae: Arc (-640mil,-535.197mil) on Component Side 
    Violation between Net Antennae: Arc (-640mil,-535.197mil) on Component Side 
+   Violation between Net Antennae: Track (-100.866mil,-243.858mil)(-95mil,-243.858mil) on Solder Side 
+   Violation between Net Antennae: Track (-100.866mil,-243.858mil)(-95mil,-243.858mil) on Solder Side 
    Violation between Net Antennae: Track (208.05mil,586.635mil)(220.846mil,573.839mil) on Component Side 
    Violation between Net Antennae: Track (616mil,227.995mil)(616mil,235mil) on Component Side 
    Violation between Net Antennae: Via (105.688mil,381.909mil) from Component Side to Solder Side 
@@ -81,7 +80,7 @@ Processing Rule : Net Antennae (Tolerance=0mil) (All)
    Violation between Net Antennae: Via (80.097mil,484.272mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (80.097mil,509.863mil) from Component Side to Solder Side 
    Violation between Net Antennae: Via (80.097mil,535.453mil) from Component Side to Solder Side 
-Rule Violations :41
+Rule Violations :43
 
 Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
 Rule Violations :0
@@ -90,8 +89,7 @@ Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM')
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))
-   Violation between Matched Net Lengths: Between Net DRAM_CLK_N And Net DRAM_CLK_P Actual Difference against DRAM_CLK_P is: 5.12mil, Tolerance : 5mil. 
-Rule Violations :1
+Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))
 Rule Violations :0
@@ -115,6 +113,6 @@ Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (
 Rule Violations :0
 
 
-Violations Detected : 51
+Violations Detected : 49
 Waived Violations : 0
 Time Elapsed        : 00:00:01
