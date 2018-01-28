@@ -89,7 +89,7 @@ Configuration2_Name14=OutputConfigurationParameter14
 Configuration2_Item14=CArc=Full|CFill=Full|Comment=Full|Coordinate=Full|CPad=Full|CRegion=Full|CText=Full|CTrack=Full|CVia=Full|Designator=Full|Dimension=Full|DLayer1=TopLayer|DLayer2=BottomLayer|FArc=Full|FFill=Full|FPad=Full|FRegion=Full|FText=Full|FTrack=Full|FVia=Full|Layer=Mechanical1|Polygon=Full|PrintOutIndex=0|Record=PcbPrintLayer
 PcbPrintPreferences2=
 OutputType3=PCB 3D Print
-OutputName3=PCB 3D Print
+OutputName3=PCB 3D Print Top
 OutputCategory3=Documentation
 OutputDocumentPath3=
 OutputVariantName3=
@@ -101,12 +101,26 @@ OutputEnabled3_OutputMedium4=0
 OutputDefault3=0
 PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration3_Name1=OutputConfigurationParameter1
-Configuration3_Item1=Record=Pcb3DPrintView|ResX=150|ResY=150|ViewX=7874016|ViewY=6692914|LookAtX=41250000|LookAtY=21450000|LookAtZ=0|UpX=0|UpY=1|UpZ=0|QuatX=0|QuatY=0|QuatZ=0|QuatW=1|Zoom=0.000154790574030983|UnitsPercent=True|UnitsDPI=True|LockResAspect=True|ViewConfigType=.config_3d|CustomCamera=False|ViewFromTop=True|ViewConfig= 
+Configuration3_Item1=Record=Pcb3DPrintView|ResX=300|ResY=300|ViewX=7874016|ViewY=6692914|LookAtX=41250000|LookAtY=21450000|LookAtZ=0|UpX=0|UpY=1|UpZ=0|QuatX=0|QuatY=0|QuatZ=0|QuatW=1|Zoom=0.000154790574030983|UnitsPercent=True|UnitsDPI=True|LockResAspect=True|ViewConfigType=.config_3d|CustomCamera=False|ViewFromTop=True|ViewConfig= 
+OutputType4=PCB 3D Print
+OutputName4=PCB 3D Print Bottom
+OutputCategory4=Documentation
+OutputDocumentPath4=
+OutputVariantName4=
+OutputEnabled4=1
+OutputEnabled4_OutputMedium1=0
+OutputEnabled4_OutputMedium2=4
+OutputEnabled4_OutputMedium3=0
+OutputEnabled4_OutputMedium4=0
+OutputDefault4=0
+PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+Configuration4_Name1=OutputConfigurationParameter1
+Configuration4_Item1=Record=Pcb3DPrintView|ResX=300|ResY=300|ViewX=7874016|ViewY=6692914|LookAtX=41250000|LookAtY=21450000|LookAtZ=0|UpX=0|UpY=1|UpZ=0|QuatX=0|QuatY=0|QuatZ=0|QuatW=1|Zoom=0.000154790574030983|UnitsPercent=True|UnitsDPI=True|LockResAspect=True|ViewConfigType=.config_3d|CustomCamera=False|ViewFromTop=False|ViewConfig= 
 
 [PublishSettings]
 OutputFilePath2=Project Outputs for Free Documents\Job1.PDF
 ReleaseManaged2=1
-OutputBasePath2=Project Outputs for Free Documents
+OutputBasePath2=Project Outputs for Dragonfleye
 OutputPathMedia2=[Media Type]
 OutputPathMediaValue2=
 OutputPathOutputer2=[Output Type]
@@ -133,7 +147,7 @@ PDFACompliance2=Disabled
 PDFVersion2=Default
 OutputFilePath3=
 ReleaseManaged3=1
-OutputBasePath3=
+OutputBasePath3=Project Outputs for Dragonfleye
 OutputPathMedia3=
 OutputPathMediaValue3=
 OutputPathOutputer3=[Output Type]
@@ -146,7 +160,7 @@ OutputFileNameSpecial3=
 OpenOutput3=1
 OutputFilePath4=
 ReleaseManaged4=1
-OutputBasePath4=
+OutputBasePath4=Project Outputs for Dragonfleye
 OutputPathMedia4=
 OutputPathMediaValue4=
 OutputPathOutputer4=[Output Type]

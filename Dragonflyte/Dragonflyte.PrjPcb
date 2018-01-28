@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=Project Outputs for Dragonflyte
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -72,23 +72,6 @@ GenerateClassCluster=0
 DocumentUniqueId=OAEODUYI
 
 [Document3]
-DocumentPath=Supplies.SchDoc
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=4
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=WERDDIJN
-
-[Document4]
 DocumentPath=MPU-Power.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -105,7 +88,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=UOAEUAPR
 
-[Document5]
+[Document4]
 DocumentPath=MPU-Memory.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -122,7 +105,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=VVXMFUMW
 
-[Document6]
+[Document5]
 DocumentPath=MPU-Control.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -139,7 +122,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=DDPREVWQ
 
-[Document7]
+[Document6]
 DocumentPath=Components.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -156,7 +139,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=YXVQUTEP
 
-[Document8]
+[Document7]
 DocumentPath=Footprints.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -173,7 +156,7 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=QBJCXVPE
 
-[Document9]
+[Document8]
 DocumentPath=MPU-Peripherals.SchDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
@@ -189,6 +172,23 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=OJWCQVEM
+
+[Document9]
+DocumentPath=Supplies.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=4
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=WERDDIJN
 
 [Document10]
 DocumentPath=MPU-Peripherals.Harness
@@ -511,7 +511,7 @@ ContentTypeGUID=
 ConfigurationType=
 
 [Generic_EDE]
-OutputDir=Project Outputs for Dragonflyte
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
