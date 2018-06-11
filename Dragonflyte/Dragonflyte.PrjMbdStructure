@@ -1,0 +1,4 @@
+Record=DiagramHierarchy|SourceDocument=Dragonflyte.MbsDoc|Kind=Multi-board Schematic Module|Designator=2|Source=Boards\Dragonfleye\Dragonfleye.PrjPcb
+Record=SubProject|SourceDocument=Dragonflyte.MbsDoc|ProjectPath=Boards\Dragonfleye\Dragonfleye.PrjPcb
+Record=DiagramHierarchy|SourceDocument=Dragonflyte.MbsDoc|Kind=Multi-board Schematic Module|Designator=1|Source=Boards\Dragonflyte\Dragonflyte.PrjPcb
+Record=SubProject|SourceDocument=Dragonflyte.MbsDoc|ProjectPath=Boards\Dragonflyte\Dragonflyte.PrjPcb

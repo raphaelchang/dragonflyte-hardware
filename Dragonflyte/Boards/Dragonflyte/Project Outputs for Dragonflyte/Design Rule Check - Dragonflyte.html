@@ -1,0 +1,627 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1/8/2018</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">12:42:30 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc" class="file"><acronym title="C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc">C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">4</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">81</td></tr>
+</table>
+</td>
+</table><a name="IDKCJDYC2L2VB0BQXHPYT5AXGV5F5GZJ1ZC4TAJRPPCKUG1BFUCOUB"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDC5N5FNUXR2M3LSCQX122P2JKUKN3RB4ZU1IINBP1BVPGAONV0RLB">Unplated multi-layer pad(s) detected</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">4</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPJLFCFHDYSA2PH311FHCX202ZI4BB02MRAZO2AIKYHZLN4512WJO">Clearance Constraint (Gap=4mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDEXATONRGOYMEMSZLV3NBSWQEJMOUQ1DVZIONKJE4HYKXGWZLJHWO">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDDBRAPU3YWBPZK3HIHW2ZTEOVREVVU3DB53WJYAG5UCTIHICBOK2J">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">70</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4PICRQLS1IGVMH14SEPWGR1J0I33XUI2UPEZ0FOUYUV3LFHICTP">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBGJ14EORD0LUQFIC4D1OQEQLI2HYQWL33XTSWK2CQ5I0GKFPL2H">Width Constraint (Min=3mil) (Max=20mil) (Preferred=5mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFJY5A51RHHBAGGJ3QIS4HQOMMMXWBNPJS5WZY3DQZJY3SUUEXF5K">Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPSGR0LYONFTVK0U4QSJN21A3JBP2YEXKFWKSK2DRPYL0OT2GBAZ">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3RBVIRMFVRXDIZ2Y2DCDMCFLLNSDY5AQ4UTLNO210QG4SKUD0EL">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDD0XI1WKNI4QWHZXWQKB1W3GIDBMXFIQ2N4T0IHHM3IWIPJVJBBAL">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">9</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDF4YOZ5SQPZEJO3NKBF4QHR5JFP0MV1WNQLUT3L25GTXEB3ODEBC">Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5I1EJHM5LJA5M1WD0NFZY1RJQMHDUSKQEHMFZ4CLLDJ2GODBVZE">Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHAIBEPISLLLNDI2GGSEXEYCGNBD2KX2DGJVVBRPINLKSJR4Z5QAC">Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDE33RDSHVZ0BXMCMOPGBSQPXVBHTFKHNWAEPNXIJKGDDDWJECCISK">Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDZAMZOJAA1ZRMBI5TI2EHMJLPXEPQPBB3KJDU1NEZEQTOQT0YYC2E">Matched Lengths(Tolerance=10mil) ((InNetClass('DRAM_ADDR_COMM') OR InNetClass('DRAM_GROUP1') OR InNetClass('DRAM_GROUP2') OR InNetClass('DRAM_GROUP3') OR InNetClass('DRAM_GROUP4')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCHB2X5NKI2WQNGFFJYYAPL5NBPZ3CRQROBIGNPP0HS2LNP2YSXXL">Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDPMEPVAWHF4XBS2NWL0VQMYBWFU2C0MR05FRANPVKC5O1Y3PL3MN">Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2HN0T20OQ1ZOPLUZKHO33TNNOIHXZF4N4O3BJQIX150AZIVOLAGE">Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFV1BH31Q0SDPOVSSH5IBGDDRQH3O3JNYA4OX5SCTE0NSALGAOKMB">Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDTYCM3T00G1XXGDOVYP0SZHGRJCYTAR50MZVRUULBLNMMHY1KO5LM">Component Clearance Constraint ( Horizontal Gap = 10mil, Vertical Gap = 10mil ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFKRF3UNPTTFNDTQLFGYTJ1PRXD0PWQIDH2XMQKLRXTYIH3L3YCTM">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">81</td>
+</tr>
+</table><br><a name="IDQX2YMVVSAPQECRARER4KKVFR3B0FXBOGMSPQISLDPGL0L0Z1YSJO"><h2>Warnings</h2></a><a name="IDC5N5FNUXR2M3LSCQX122P2JKUKN3RB4ZU1IINBP1BVPGAONV0RLB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Unplated multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Pad MK4-4(640mil,-535.197mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Pad MK3-4(-640mil,-535.197mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Pad MK2-4(-640mil,535.197mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Pad MK1-4(640mil,535.197mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3414.299mil|Location2.X=4877.236mil|Location1.Y=1431.701mil|Location2.Y=3021.843mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDDBRAPU3YWBPZK3HIHW2ZTEOVREVVU3DB53WJYAG5UCTIHICBOK2J"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3842.472mil|Location2.X=4044.323mil|Location1.Y=2731.528mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3842.472mil|Location2.X=4044.323mil|Location1.Y=2731.528mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_20 Between Via (-274.527mil,594.528mil) from Component Side to Solder Side And Pad JP2-20(-88.583mil,719.213mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3852.41mil|Location2.X=4024.638mil|Location1.Y=2766.032mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3852.41mil|Location2.X=4024.638mil|Location1.Y=2766.032mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_21 Between Pad U14-A7(-264.685mil,628.937mil) on Component Side And Pad JP2-21(-108.268mil,719.213mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3872.095mil|Location2.X=4004.953mil|Location1.Y=2766.032mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3872.095mil|Location2.X=4004.953mil|Location1.Y=2766.032mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_22 Between Pad U14-A6(-245mil,628.937mil) on Component Side And Pad JP2-22(-127.953mil,719.213mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3862.252mil|Location2.X=3985.268mil|Location1.Y=2746.347mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3862.252mil|Location2.X=3985.268mil|Location1.Y=2746.347mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_23 Between Pad U14-B6(-254.843mil,609.252mil) on Component Side And Pad JP2-23(-147.638mil,719.213mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3949.772mil|Location2.X=4016.843mil|Location1.Y=2597.724mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3949.772mil|Location2.X=4016.843mil|Location1.Y=2597.724mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_24 Between Pad JP2-24(-167.323mil,719.213mil) on Component Side And Pad U14-A37(-116.063mil,460.63mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3930.087mil|Location2.X=3983mil|Location1.Y=2607mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3930.087mil|Location2.X=3983mil|Location1.Y=2607mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_25 Between Pad JP2-25(-187.008mil,719.213mil) on Component Side And Via (-150mil,470mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3818.307mil|Location2.X=4111.122mil|Location1.Y=2764.213mil|Location2.Y=2727.5mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3818.307mil|Location2.X=4111.122mil|Location1.Y=2764.213mil|Location2.Y=2727.5mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_26 Between Pad JP2-26(-206.693mil,719.213mil) on Component Side And Track (-116.063mil,480.315mil)(-113.878mil,482.5mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3890.717mil|Location2.X=3983mil|Location1.Y=2627mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3890.717mil|Location2.X=3983mil|Location1.Y=2627mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_27 Between Pad JP2-27(-226.378mil,719.213mil) on Component Side And Via (-150mil,490mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3871.032mil|Location2.X=4016.843mil|Location1.Y=2637.095mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3871.032mil|Location2.X=4016.843mil|Location1.Y=2637.095mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_28 Between Pad JP2-28(-246.063mil,719.213mil) on Component Side And Pad U14-A39(-116.063mil,500mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3851.347mil|Location2.X=3983mil|Location1.Y=2647mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3851.347mil|Location2.X=3983mil|Location1.Y=2647mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_29 Between Pad JP2-29(-265.748mil,719.213mil) on Component Side And Via (-150mil,510mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3831.661mil|Location2.X=4016.843mil|Location1.Y=2656.78mil|Location2.Y=2892.787mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3831.661mil|Location2.X=4016.843mil|Location1.Y=2656.78mil|Location2.Y=2892.787mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_30 Between Pad JP2-30(-285.433mil,719.213mil) on Component Side And Pad U14-A40(-116.063mil,519.685mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3831.661mil|Location2.X=3983mil|Location1.Y=2667mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3831.661mil|Location2.X=3983mil|Location1.Y=2667mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_31 Between Pad JP2-31(-285.433mil,888.504mil) on Component Side And Via (-150mil,530mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3851.346mil|Location2.X=3966.646mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3851.346mil|Location2.X=3966.646mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_32 Between Pad JP2-32(-265.748mil,888.504mil) on Component Side And Pad U14-A2(-166.26mil,628.937mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3871.032mil|Location2.X=3976.488mil|Location1.Y=2746.347mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3871.032mil|Location2.X=3976.488mil|Location1.Y=2746.347mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_33 Between Pad JP2-33(-246.063mil,888.504mil) on Component Side And Pad U14-B1(-156.417mil,609.252mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3890.716mil|Location2.X=3986.331mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3890.716mil|Location2.X=3986.331mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_34 Between Pad JP2-34(-226.378mil,888.504mil) on Component Side And Pad U14-A1(-146.575mil,628.937mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.402mil|Location2.X=4016.843mil|Location1.Y=2735.52mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3910.402mil|Location2.X=4016.843mil|Location1.Y=2735.52mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_35 Between Pad JP2-35(-206.693mil,888.504mil) on Component Side And Pad U14-A44(-116.063mil,598.425mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3930.087mil|Location2.X=3997.157mil|Location1.Y=2725.677mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3930.087mil|Location2.X=3997.157mil|Location1.Y=2725.677mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_36 Between Pad JP2-36(-187.008mil,888.504mil) on Component Side And Pad U14-B40(-135.748mil,588.583mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3949.772mil|Location2.X=4016.843mil|Location1.Y=2715.835mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3949.772mil|Location2.X=4016.843mil|Location1.Y=2715.835mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_37 Between Pad JP2-37(-167.323mil,888.504mil) on Component Side And Pad U14-A43(-116.063mil,578.74mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3968.102mil|Location2.X=3985.268mil|Location1.Y=2705.898mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3968.102mil|Location2.X=3985.268mil|Location1.Y=2705.898mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_38 Between Via (-148.898mil,568.898mil) from Component Side to Solder Side And Pad JP2-38(-147.638mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3989.142mil|Location2.X=4016.843mil|Location1.Y=2696.15mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3989.142mil|Location2.X=4016.843mil|Location1.Y=2696.15mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_39 Between Pad JP2-39(-127.953mil,888.504mil) on Component Side And Pad U14-A42(-116.063mil,559.055mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3922mil|Location2.X=4024.638mil|Location1.Y=2732mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3922mil|Location2.X=4024.638mil|Location1.Y=2732mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_40 Between Via (-195mil,595mil) from Component Side to Solder Side And Pad JP2-40(-108.268mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3931.15mil|Location2.X=4044.323mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3931.15mil|Location2.X=4044.323mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_41 Between Pad U14-A3(-185.945mil,628.937mil) on Component Side And Pad JP2-41(-88.583mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3940.992mil|Location2.X=4064.008mil|Location1.Y=2746.347mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3940.992mil|Location2.X=4064.008mil|Location1.Y=2746.347mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_42 Between Pad U14-B2(-176.102mil,609.252mil) on Component Side And Pad JP2-42(-68.898mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3911.465mil|Location2.X=4083.693mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3911.465mil|Location2.X=4083.693mil|Location1.Y=2766.032mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_43 Between Pad U14-A4(-205.63mil,628.937mil) on Component Side And Pad JP2-43(-49.213mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3955.686mil|Location2.X=4103.378mil|Location1.Y=2578.314mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3955.686mil|Location2.X=4103.378mil|Location1.Y=2578.314mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_44 Between Via (-161.314mil,441.314mil) from Component Side to Solder Side And Pad JP2-44(-29.528mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4015.459mil|Location2.X=4123.063mil|Location1.Y=2563.541mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4015.459mil|Location2.X=4123.063mil|Location1.Y=2563.541mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_45 Between Via (-101.541mil,426.541mil) from Component Side to Solder Side And Pad JP2-45(-9.842mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4012mil|Location2.X=4142.748mil|Location1.Y=2527mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4012mil|Location2.X=4142.748mil|Location1.Y=2527mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_46 Between Via (-105mil,390mil) from Component Side to Solder Side And Pad JP2-46(9.842mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3985.032mil|Location2.X=4162.433mil|Location1.Y=2536.949mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3985.032mil|Location2.X=4162.433mil|Location1.Y=2536.949mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net NetJP2_47 Between Via (-131.968mil,399.949mil) from Component Side to Solder Side And Pad JP2-47(29.527mil,888.504mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4166.307mil|Location2.X=4199.224mil|Location1.Y=2788.689mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4166.307mil|Location2.X=4199.224mil|Location1.Y=2788.689mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net I2C1_SCL Between Pad JP2-48(49.213mil,888.504mil) on Component Side And Pad U1-B20(67.303mil,650.61mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4185.992mil|Location2.X=4250.405mil|Location1.Y=2763.099mil|Location2.Y=3062.079mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4185.992mil|Location2.X=4250.405mil|Location1.Y=2763.099mil|Location2.Y=3062.079mil|Absolute=True">Un-Routed Net Constraint: Net I2C1_SDA Between Pad JP2-49(68.898mil,888.504mil) on Component Side And Pad U1-D19(118.484mil,625.02mil) on Component Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=2663.386mil|Location2.Y=2697.008mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3468.189mil|Location2.X=3501.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4748.189mil|Location2.X=4781.811mil|Location1.Y=1592.992mil|Location2.Y=1626.614mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDD0XI1WKNI4QWHZXWQKB1W3GIDBMXFIQ2N4T0IHHM3IWIPJVJBBAL"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Net Antennae (Tolerance=0mil) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4008.5mil|Location2.X=4038.619mil|Location1.Y=2523.5mil|Location2.Y=2568.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4008.5mil|Location2.X=4038.619mil|Location1.Y=2523.5mil|Location2.Y=2568.47mil|Absolute=True">Net Antennae: Via (-105mil,390mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3964.602mil|Location2.X=3994.722mil|Location1.Y=2702.398mil|Location2.Y=2747.367mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3964.602mil|Location2.X=3994.722mil|Location1.Y=2702.398mil|Location2.Y=2747.367mil|Absolute=True">Net Antennae: Via (-148.898mil,568.898mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2603.5mil|Location2.Y=2648.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2603.5mil|Location2.Y=2648.47mil|Absolute=True">Net Antennae: Via (-150mil,470mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2623.5mil|Location2.Y=2668.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2623.5mil|Location2.Y=2668.47mil|Absolute=True">Net Antennae: Via (-150mil,490mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2643.5mil|Location2.Y=2688.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2643.5mil|Location2.Y=2688.47mil|Absolute=True">Net Antennae: Via (-150mil,510mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2663.5mil|Location2.Y=2708.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.5mil|Location2.X=3993.619mil|Location1.Y=2663.5mil|Location2.Y=2708.47mil|Absolute=True">Net Antennae: Via (-150mil,530mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3952.186mil|Location2.X=3982.306mil|Location1.Y=2574.814mil|Location2.Y=2619.783mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3952.186mil|Location2.X=3982.306mil|Location1.Y=2574.814mil|Location2.Y=2619.783mil|Absolute=True">Net Antennae: Via (-161.314mil,441.314mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3918.5mil|Location2.X=3948.619mil|Location1.Y=2728.5mil|Location2.Y=2773.47mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3918.5mil|Location2.X=3948.619mil|Location1.Y=2728.5mil|Location2.Y=2773.47mil|Absolute=True">Net Antennae: Via (-195mil,595mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3838.972mil|Location2.X=3869.092mil|Location1.Y=2728.028mil|Location2.Y=2772.997mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3838.972mil|Location2.X=3869.092mil|Location1.Y=2728.028mil|Location2.Y=2772.997mil|Absolute=True">Net Antennae: Via (-274.527mil,594.528mil) from Component Side to Solder Side </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDE33RDSHVZ0BXMCMOPGBSQPXVBHTFKHNWAEPNXIJKGDDDWJECCISK"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4273.57mil|Location2.X=4563.822mil|Location1.Y=1929.5mil|Location2.Y=2418.673mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4273.57mil|Location2.X=4563.822mil|Location1.Y=1929.5mil|Location2.Y=2418.673mil|Absolute=True">Matched Net Lengths: Between Net DRAM_CS And Net DRAM_SDCKE Length:1156.518mil is not within 50mil tolerance of Length:1242.032mil (35.515mil short) </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.822mil|Location2.X=4603.322mil|Location1.Y=1916.772mil|Location2.Y=2418.673mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4256.822mil|Location2.X=4603.322mil|Location1.Y=1916.772mil|Location2.Y=2418.673mil|Absolute=True">Matched Net Lengths: Between Net DRAM_SDCKE And Net DRAM_SDODT Length:1155.85mil is not within 50mil tolerance of Length:1242.032mil (36.182mil short) </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
