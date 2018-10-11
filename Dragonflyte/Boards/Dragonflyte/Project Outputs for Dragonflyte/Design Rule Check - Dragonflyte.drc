@@ -1,13 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Dragonflyte.PcbDoc
-Date     : 1/8/2018
-Time     : 12:42:30 AM
-
-WARNING: Unplated multi-layer pad(s) detected
-   Pad MK4-4(640mil,-535.197mil) on Multi-Layer on Net GND
-   Pad MK3-4(-640mil,-535.197mil) on Multi-Layer on Net GND
-   Pad MK2-4(-640mil,535.197mil) on Multi-Layer on Net GND
-   Pad MK1-4(640mil,535.197mil) on Multi-Layer on Net GND
+PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Boards\Dragonflyte\Dragonflyte.PcbDoc
+Date     : 10/11/2018
+Time     : 6:26:32 PM
 
 Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
 Rule Violations :0
@@ -16,82 +10,12 @@ Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net NetJP2_20 Between Via (-274.527mil,594.528mil) from Component Side to Solder Side And Pad JP2-20(-88.583mil,719.213mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_21 Between Pad U14-A7(-264.685mil,628.937mil) on Component Side And Pad JP2-21(-108.268mil,719.213mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_22 Between Pad U14-A6(-245mil,628.937mil) on Component Side And Pad JP2-22(-127.953mil,719.213mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_23 Between Pad U14-B6(-254.843mil,609.252mil) on Component Side And Pad JP2-23(-147.638mil,719.213mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_24 Between Pad JP2-24(-167.323mil,719.213mil) on Component Side And Pad U14-A37(-116.063mil,460.63mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_25 Between Pad JP2-25(-187.008mil,719.213mil) on Component Side And Via (-150mil,470mil) from Component Side to Solder Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_26 Between Pad JP2-26(-206.693mil,719.213mil) on Component Side And Track (-116.063mil,480.315mil)(-113.878mil,482.5mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_27 Between Pad JP2-27(-226.378mil,719.213mil) on Component Side And Via (-150mil,490mil) from Component Side to Solder Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_28 Between Pad JP2-28(-246.063mil,719.213mil) on Component Side And Pad U14-A39(-116.063mil,500mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_29 Between Pad JP2-29(-265.748mil,719.213mil) on Component Side And Via (-150mil,510mil) from Component Side to Solder Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_30 Between Pad JP2-30(-285.433mil,719.213mil) on Component Side And Pad U14-A40(-116.063mil,519.685mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_31 Between Pad JP2-31(-285.433mil,888.504mil) on Component Side And Via (-150mil,530mil) from Component Side to Solder Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_32 Between Pad JP2-32(-265.748mil,888.504mil) on Component Side And Pad U14-A2(-166.26mil,628.937mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_33 Between Pad JP2-33(-246.063mil,888.504mil) on Component Side And Pad U14-B1(-156.417mil,609.252mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_34 Between Pad JP2-34(-226.378mil,888.504mil) on Component Side And Pad U14-A1(-146.575mil,628.937mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_35 Between Pad JP2-35(-206.693mil,888.504mil) on Component Side And Pad U14-A44(-116.063mil,598.425mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_36 Between Pad JP2-36(-187.008mil,888.504mil) on Component Side And Pad U14-B40(-135.748mil,588.583mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_37 Between Pad JP2-37(-167.323mil,888.504mil) on Component Side And Pad U14-A43(-116.063mil,578.74mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_38 Between Via (-148.898mil,568.898mil) from Component Side to Solder Side And Pad JP2-38(-147.638mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_39 Between Pad JP2-39(-127.953mil,888.504mil) on Component Side And Pad U14-A42(-116.063mil,559.055mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_40 Between Via (-195mil,595mil) from Component Side to Solder Side And Pad JP2-40(-108.268mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_41 Between Pad U14-A3(-185.945mil,628.937mil) on Component Side And Pad JP2-41(-88.583mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_42 Between Pad U14-B2(-176.102mil,609.252mil) on Component Side And Pad JP2-42(-68.898mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_43 Between Pad U14-A4(-205.63mil,628.937mil) on Component Side And Pad JP2-43(-49.213mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_44 Between Via (-161.314mil,441.314mil) from Component Side to Solder Side And Pad JP2-44(-29.528mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_45 Between Via (-101.541mil,426.541mil) from Component Side to Solder Side And Pad JP2-45(-9.842mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_46 Between Via (-105mil,390mil) from Component Side to Solder Side And Pad JP2-46(9.842mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net NetJP2_47 Between Via (-131.968mil,399.949mil) from Component Side to Solder Side And Pad JP2-47(29.527mil,888.504mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net I2C1_SCL Between Pad JP2-48(49.213mil,888.504mil) on Component Side And Pad U1-B20(67.303mil,650.61mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net I2C1_SDA Between Pad JP2-49(68.898mil,888.504mil) on Component Side And Pad U1-D19(118.484mil,625.02mil) on Component Side 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK1-4(640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] And Pad MK2-4(-640mil,535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK3-4(-640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] And Pad MK4-4(640mil,-535.197mil) on Multi-Layer [Unplated] 
-Rule Violations :70
+Rule Violations :0
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=3mil) (Max=20mil) (Preferred=5mil) (All)
+Processing Rule : Width Constraint (Min=3mil) (Max=25mil) (Preferred=5mil) (All)
 Rule Violations :0
 
 Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
@@ -104,53 +28,66 @@ Processing Rule : Hole To Hole Clearance (Gap=10mil) (All),(All)
 Rule Violations :0
 
 Processing Rule : Net Antennae (Tolerance=0mil) (All)
-   Violation between Net Antennae: Via (-105mil,390mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-148.898mil,568.898mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-150mil,470mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-150mil,490mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-150mil,510mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-150mil,530mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-161.314mil,441.314mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-195mil,595mil) from Component Side to Solder Side 
-   Violation between Net Antennae: Via (-274.527mil,594.528mil) from Component Side to Solder Side 
-Rule Violations :9
+Rule Violations :0
 
 Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
-Rule Violations :0
-
-Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM'))
-Rule Violations :0
-
-Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))
-Rule Violations :0
-
-Processing Rule : Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))
-   Violation between Matched Net Lengths: Between Net DRAM_CS And Net DRAM_SDCKE Length:1156.518mil is not within 50mil tolerance of Length:1242.032mil (35.515mil short) 
-   Violation between Matched Net Lengths: Between Net DRAM_SDCKE And Net DRAM_SDODT Length:1155.85mil is not within 50mil tolerance of Length:1242.032mil (36.182mil short) 
-Rule Violations :2
-
-Processing Rule : Matched Lengths(Tolerance=10mil) ((InNetClass('DRAM_ADDR_COMM') OR InNetClass('DRAM_GROUP1') OR InNetClass('DRAM_GROUP2') OR InNetClass('DRAM_GROUP3') OR InNetClass('DRAM_GROUP4')))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP3'))
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP4'))
-Rule Violations :0
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM'))
+   Violation between Matched Net Lengths: Between Net DRAM_A0 And Net DRAM_A13 Length:839.021mil is not within 25mil tolerance of Length:967.654mil (103.633mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A1 And Net DRAM_A13 Length:853.094mil is not within 25mil tolerance of Length:967.654mil (89.56mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A11 And Net DRAM_A13 Length:854.358mil is not within 25mil tolerance of Length:967.654mil (88.296mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A12 And Net DRAM_A13 Length:842.283mil is not within 25mil tolerance of Length:967.654mil (100.371mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A14 Length:843.533mil is not within 25mil tolerance of Length:967.654mil (99.121mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A2 Length:941.259mil is not within 25mil tolerance of Length:967.654mil (1.395mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A3 Length:876.211mil is not within 25mil tolerance of Length:967.654mil (66.443mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A4 Length:896.699mil is not within 25mil tolerance of Length:967.654mil (45.955mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A5 Length:876.645mil is not within 25mil tolerance of Length:967.654mil (66.009mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A6 Length:907.439mil is not within 25mil tolerance of Length:967.654mil (35.214mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A7 Length:892.54mil is not within 25mil tolerance of Length:967.654mil (50.114mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A8 Length:893.798mil is not within 25mil tolerance of Length:967.654mil (48.856mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_A9 Length:877.196mil is not within 25mil tolerance of Length:967.654mil (65.458mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_CAS Length:879.506mil is not within 25mil tolerance of Length:967.654mil (63.148mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_RAS Length:846.41mil is not within 25mil tolerance of Length:967.654mil (96.244mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_SDBA0 Length:890.203mil is not within 25mil tolerance of Length:967.654mil (52.451mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_SDBA1 Length:902.137mil is not within 25mil tolerance of Length:967.654mil (40.517mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_SDBA2 Length:837.874mil is not within 25mil tolerance of Length:967.654mil (104.78mil short) 
+   Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_WE Length:850.904mil is not within 25mil tolerance of Length:967.654mil (91.749mil short) 
+Rule Violations :19
 
-Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP1'))
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP4'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP2'))
 Rule Violations :0
 
-Processing Rule : Component Clearance Constraint ( Horizontal Gap = 10mil, Vertical Gap = 10mil ) (All),(All) 
+Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))
+   Violation between Matched Net Lengths: Between Net DRAM_CLK_N And Net DRAM_CLK_P Actual Difference against DRAM_CLK_P is: 45.711mil, Tolerance : 5mil. 
+Rule Violations :1
+
+Processing Rule : Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))
+   Violation between Matched Net Lengths: Between Net DRAM_CS And Net DRAM_SDCKE Length:1116.304mil is not within 50mil tolerance of Length:1175.831mil (9.527mil short) 
+Rule Violations :1
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP1'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=10mil) ((InNetClass('DRAM_ADDR_COMM') OR InNetClass('DRAM_GROUP1') OR InNetClass('DRAM_GROUP2') OR InNetClass('DRAM_GROUP3') OR InNetClass('DRAM_GROUP4')))
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 5mil, Vertical Gap = 5mil ) (All),(All) 
+Rule Violations :0
+
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mil, Vertical Gap = 0mil ) (InComponent('CAMERA')),(All) 
 Rule Violations :0
 
 Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
 Rule Violations :0
 
 
-Violations Detected : 81
+Violations Detected : 21
 Waived Violations : 0
-Time Elapsed        : 00:00:00
+Time Elapsed        : 00:00:01
