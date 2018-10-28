@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Boards\Dragonflyte\Dragonflyte.PcbDoc
-Date     : 10/11/2018
-Time     : 6:26:32 PM
+Date     : 10/27/2018
+Time     : 10:28:42 PM
 
 Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
 Rule Violations :0
@@ -15,7 +15,7 @@ Rule Violations :0
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
 
-Processing Rule : Width Constraint (Min=3mil) (Max=25mil) (Preferred=5mil) (All)
+Processing Rule : Width Constraint (Min=3mil) (Max=30mil) (Preferred=5mil) (All)
 Rule Violations :0
 
 Processing Rule : Power Plane Connect Rule(Direct Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)
@@ -30,10 +30,75 @@ Rule Violations :0
 Processing Rule : Net Antennae (Tolerance=0mil) (All)
 Rule Violations :0
 
+Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
+   Violation between Board Outline Clearance(Outline Edge): (9.292mil < 10mil) Between Arc (709.055mil,186.771mil) on Top Overlay And Board Edge 
+   Violation between Board Outline Clearance(Outline Edge): (7.835mil < 10mil) Between Board Edge And Pad AE2-2(0mil,-995.512mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (7.835mil < 10mil) Between Board Edge And Pad AE2-2(70.866mil,-995.512mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (7.835mil < 10mil) Between Board Edge And Pad AE2-2(-70.866mil,-995.512mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-31(-285.433mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-31(-285.433mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-32(-265.748mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-33(-246.063mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-34(-226.378mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-35(-206.693mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-36(-187.008mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-37(-167.323mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-38(-147.638mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-39(-127.953mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-40(-108.268mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-41(-88.583mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-42(-68.898mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-43(-49.213mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-44(-29.528mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-45(-9.842mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-46(9.842mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-47(29.527mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-48(49.213mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-49(68.898mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-50(88.583mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-51(108.268mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-52(127.953mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-53(147.638mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-54(167.323mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-55(187.008mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-56(206.693mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-57(226.378mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-58(246.063mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-59(265.748mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.922mil < 10mil) Between Board Edge And Pad CAMERA-60(285.433mil,888.504mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (5.899mil < 10mil) Between Board Edge And Pad JP1-MT1(705mil,157.48mil) on Solder Side 
+   Violation between Board Outline Clearance(Outline Edge): (5.419mil < 10mil) Between Board Edge And Pad JP1-MT2(705mil,-158mil) on Solder Side 
+   Violation between Board Outline Clearance(Outline Edge): (8.675mil < 10mil) Between Board Edge And Text "C81" (730mil,-105mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (7.004mil < 10mil) Between Board Edge And Text "U10" (675mil,180mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (6.89mil < 10mil) Between Board Edge And Track (102.362mil,-997.48mil)(118.11mil,-997.48mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (6.89mil < 10mil) Between Board Edge And Track (-118.11mil,-997.48mil)(-102.362mil,-997.48mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (6.89mil < 10mil) Between Board Edge And Track (118.11mil,-997.48mil)(118.11mil,-682.52mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (6.89mil < 10mil) Between Board Edge And Track (-118.11mil,-997.48mil)(-118.11mil,-682.52mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.93mil < 10mil) Between Board Edge And Track (303.15mil,897.362mil)(342.52mil,897.362mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.93mil < 10mil) Between Board Edge And Track (342.52mil,834.37mil)(342.52mil,897.362mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.93mil < 10mil) Between Board Edge And Track (-342.52mil,834.37mil)(-342.52mil,897.362mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.93mil < 10mil) Between Board Edge And Track (-342.52mil,897.362mil)(-303.15mil,897.362mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.439mil < 10mil) Between Board Edge And Track (577.008mil,418.071mil)(702.992mil,418.071mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.438mil < 10mil) Between Board Edge And Track (577.008mil,-418.071mil)(702.992mil,-418.071mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.26mil < 10mil) Between Board Edge And Track (637.5mil,-231.694mil)(640.87mil,-235.064mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.26mil < 10mil) Between Board Edge And Track (640.87mil,-285.311mil)(640.87mil,-235.064mil) on Component Side 
+   Violation between Board Outline Clearance(Outline Edge): (9.979mil < 10mil) Between Board Edge And Track (640mil,195.858mil)(640mil,339.914mil) on Inner Layer 2 
+   Violation between Board Outline Clearance(Outline Edge): (9.439mil < 10mil) Between Board Edge And Track (-702.992mil,418.071mil)(-577.008mil,418.071mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.439mil < 10mil) Between Board Edge And Track (-702.992mil,-418.071mil)(-577.008mil,-418.071mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.439mil < 10mil) Between Board Edge And Track (702.992mil,418.071mil)(702.992mil,579.488mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.439mil < 10mil) Between Board Edge And Track (-702.992mil,418.071mil)(-702.992mil,579.488mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.438mil < 10mil) Between Board Edge And Track (702.992mil,-579.488mil)(702.992mil,-418.071mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (9.439mil < 10mil) Between Board Edge And Track (-702.992mil,-579.488mil)(-702.992mil,-418.071mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 10mil) Between Board Edge And Track (762.087mil,-134mil)(762.087mil,133.858mil) on Bottom Overlay 
+Rule Violations :59
+
 Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP3'))
+Rule Violations :0
+
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP4'))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM'))
@@ -58,36 +123,33 @@ Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_ADDR_COMM')
    Violation between Matched Net Lengths: Between Net DRAM_A13 And Net DRAM_WE Length:850.904mil is not within 25mil tolerance of Length:967.654mil (91.749mil short) 
 Rule Violations :19
 
-Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP4'))
-Rule Violations :0
+Processing Rule : Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))
+   Violation between Matched Net Lengths: Between Net DRAM_CS And Net DRAM_SDCKE Length:1116.304mil is not within 50mil tolerance of Length:1175.831mil (9.527mil short) 
+Rule Violations :1
 
-Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP2'))
+Processing Rule : Matched Lengths(Tolerance=10mil) ((InNetClass('DRAM_ADDR_COMM') OR InNetClass('DRAM_GROUP1') OR InNetClass('DRAM_GROUP2') OR InNetClass('DRAM_GROUP3') OR InNetClass('DRAM_GROUP4')))
 Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=5mil) (InNetClass('DRAM_CLK'))
    Violation between Matched Net Lengths: Between Net DRAM_CLK_N And Net DRAM_CLK_P Actual Difference against DRAM_CLK_P is: 45.711mil, Tolerance : 5mil. 
 Rule Violations :1
 
-Processing Rule : Matched Lengths(Tolerance=50mil) (InNetClass('DRAM_CTRL'))
-   Violation between Matched Net Lengths: Between Net DRAM_CS And Net DRAM_SDCKE Length:1116.304mil is not within 50mil tolerance of Length:1175.831mil (9.527mil short) 
-Rule Violations :1
+Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP2'))
+Rule Violations :0
 
 Processing Rule : Matched Lengths(Tolerance=25mil) (InNetClass('DRAM_GROUP1'))
 Rule Violations :0
 
-Processing Rule : Matched Lengths(Tolerance=10mil) ((InNetClass('DRAM_ADDR_COMM') OR InNetClass('DRAM_GROUP1') OR InNetClass('DRAM_GROUP2') OR InNetClass('DRAM_GROUP3') OR InNetClass('DRAM_GROUP4')))
+Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mil, Vertical Gap = 0mil ) (InComponent('CAMERA')),(All) 
 Rule Violations :0
 
 Processing Rule : Component Clearance Constraint ( Horizontal Gap = 5mil, Vertical Gap = 5mil ) (All),(All) 
-Rule Violations :0
-
-Processing Rule : Component Clearance Constraint ( Horizontal Gap = 0mil, Vertical Gap = 0mil ) (InComponent('CAMERA')),(All) 
 Rule Violations :0
 
 Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)
 Rule Violations :0
 
 
-Violations Detected : 21
+Violations Detected : 80
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:09
