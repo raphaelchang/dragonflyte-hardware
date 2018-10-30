@@ -17,11 +17,11 @@ RevisionNamingSchemeGUID=
 [OutputGroup1]
 Name=Dragonflyte.OutJob
 Description=
-TargetOutputMedium=PDF
+TargetOutputMedium=Folder Structure
 VariantName=[No Variations]
 VariantScope=1
 CurrentConfigurationName=
-TargetPrinter=Virtual Printer
+TargetPrinter=Microsoft Print to PDF
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=0
 OutputMedium1=Print Job
 OutputMedium1_Type=Printer
@@ -38,7 +38,7 @@ OutputName1=Schematic Prints
 OutputCategory1=Documentation
 OutputDocumentPath1=
 OutputVariantName1=
-OutputEnabled1=1
+OutputEnabled1=0
 OutputEnabled1_OutputMedium1=0
 OutputEnabled1_OutputMedium2=1
 OutputEnabled1_OutputMedium3=0
@@ -52,7 +52,7 @@ OutputName2=PCB Prints
 OutputCategory2=Documentation
 OutputDocumentPath2=
 OutputVariantName2=
-OutputEnabled2=1
+OutputEnabled2=0
 OutputEnabled2_OutputMedium1=0
 OutputEnabled2_OutputMedium2=2
 OutputEnabled2_OutputMedium3=0
@@ -99,7 +99,7 @@ OutputName3=PCB 3D Print Top
 OutputCategory3=Documentation
 OutputDocumentPath3=
 OutputVariantName3=
-OutputEnabled3=1
+OutputEnabled3=0
 OutputEnabled3_OutputMedium1=0
 OutputEnabled3_OutputMedium2=3
 OutputEnabled3_OutputMedium3=0
@@ -107,13 +107,13 @@ OutputEnabled3_OutputMedium4=0
 OutputDefault3=0
 PageOptions3=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=4.36|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration3_Name1=OutputConfigurationParameter1
-Configuration3_Item1=Record=Pcb3DPrintView|ResX=300|ResY=300|ViewX=17267136|ViewY=19500000|LookAtX=41250000|LookAtY=20950000|LookAtZ=0|UpX=0|UpY=1|UpZ=0|QuatX=0|QuatY=0|QuatZ=0|QuatW=1|Zoom=5.31282051282051E-5|UnitsPercent=True|UnitsDPI=True|LockResAspect=True|ViewConfigType=.config_3d|CustomCamera=False|ViewFromTop=True|ViewConfig= 
+Configuration3_Item1=Record=Pcb3DPrintView|ResX=300|ResY=300|ViewX=17267136|ViewY=19500000|LookAtX=41250000|LookAtY=20950000|LookAtZ=0|UpX=0|UpY=1|UpZ=0|QuatX=0|QuatY=0|QuatZ=0|QuatW=1|Zoom=5.31282051282051E-5|UnitsPercent=True|UnitsDPI=True|LockResAspect=True|ViewConfigType=.config_3d|CustomCamera=False|ViewFromTop=True|ViewConfig=
 OutputType4=PCB 3D Print
 OutputName4=PCB 3D Print Bottom
 OutputCategory4=Documentation
 OutputDocumentPath4=
 OutputVariantName4=
-OutputEnabled4=1
+OutputEnabled4=0
 OutputEnabled4_OutputMedium1=0
 OutputEnabled4_OutputMedium2=4
 OutputEnabled4_OutputMedium3=0
@@ -121,7 +121,61 @@ OutputEnabled4_OutputMedium4=0
 OutputDefault4=0
 PageOptions4=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=4.36|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
 Configuration4_Name1=OutputConfigurationParameter1
-Configuration4_Item1=Record=Pcb3DPrintView|ResX=300|ResY=300|ViewX=17267136|ViewY=19500000|LookAtX=41250000|LookAtY=20950000|LookAtZ=0|UpX=0|UpY=1|UpZ=0|QuatX=0|QuatY=0|QuatZ=0|QuatW=1|Zoom=5.31282051282051E-5|UnitsPercent=True|UnitsDPI=True|LockResAspect=True|ViewConfigType=.config_3d|CustomCamera=False|ViewFromTop=False|ViewConfig= 
+Configuration4_Item1=Record=Pcb3DPrintView|ResX=300|ResY=300|ViewX=17267136|ViewY=19500000|LookAtX=41250000|LookAtY=20950000|LookAtZ=0|UpX=0|UpY=1|UpZ=0|QuatX=0|QuatY=0|QuatZ=0|QuatW=1|Zoom=5.31282051282051E-5|UnitsPercent=True|UnitsDPI=True|LockResAspect=True|ViewConfigType=.config_3d|CustomCamera=False|ViewFromTop=False|ViewConfig=
+OutputType5=BOM_PartType
+OutputName5=Bill of Materials
+OutputCategory5=Report
+OutputDocumentPath5=
+OutputVariantName5=
+OutputEnabled5=0
+OutputEnabled5_OutputMedium1=0
+OutputEnabled5_OutputMedium2=0
+OutputEnabled5_OutputMedium3=0
+OutputEnabled5_OutputMedium4=0
+OutputDefault5=0
+PageOptions5=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=0|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-3|MediaType=1|DitherType=10|PrintScaleMode=1|PaperKind=Letter|PaperIndex=1
+Configuration5_Name1=ColumnNameFormat
+Configuration5_Item1=CaptionAsName
+Configuration5_Name2=Filter
+Configuration5_Item2=545046300E5446696C74657257726170706572000D46696C7465722E416374697665090F46696C7465722E43726974657269610A04000000000000000000
+Configuration5_Name3=General
+Configuration5_Item3=OpenExported=False|AddToProject=False|ForceFit=False|NotFitted=False|Database=False|DatabasePriority=False|IncludePCBData=True|IncludeVaultData=True|IncludeAlternatives=False|ShowExportOptions=True|TemplateFilename=|BatchMode=5|FormWidth=1475|FormHeight=659|SupplierProdQty=1|SupplierAutoQty=False|SupplierUseCachedPricing=False|SupplierCurrency=<none>|ViewType=0
+Configuration5_Name4=GroupOrder
+Configuration5_Item4=PartNumber=True
+Configuration5_Name5=PCBDocument
+Configuration5_Item5=FileName=Dragonflyte.PcbDoc
+Configuration5_Name6=PCBDocument2
+Configuration5_Item6=FileName=[PCB Document 1]
+Configuration5_Name7=SortOrder
+Configuration5_Item7=Designator=Up|Comment=Up|Footprint=Up
+Configuration5_Name8=VisibleOrder
+Configuration5_Item8=Designator=336|Quantity=37|Manufacturer=63|PartNumber=49|PackageReference=56|Description=268|Mounting Technology=100|Layer=100
+OutputType6=Gerber
+OutputName6=Gerber Files
+OutputCategory6=Fabrication
+OutputDocumentPath6=
+OutputVariantName6=
+OutputEnabled6=1
+OutputEnabled6_OutputMedium1=0
+OutputEnabled6_OutputMedium2=0
+OutputEnabled6_OutputMedium3=2
+OutputEnabled6_OutputMedium4=0
+OutputDefault6=0
+Configuration6_Name1=OutputConfigurationParameter1
+Configuration6_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set= |LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=KeepLeadingAndTrailingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=40|MinusApertureTolerance=40|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Absolute|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16777218~1,16777219~1,16842754~1,16842751~1,16973835~1,16973833~1,16973831~1,16973837~1,16973848~1,16973849~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=False|PlotUsedDrillGuideLayerPairs=False|PlusApertureTolerance=40|PlusApertureTolerance=40|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
+OutputType7=NC Drill
+OutputName7=NC Drill Files
+OutputCategory7=Fabrication
+OutputDocumentPath7=
+OutputVariantName7=
+OutputEnabled7=1
+OutputEnabled7_OutputMedium1=0
+OutputEnabled7_OutputMedium2=0
+OutputEnabled7_OutputMedium3=1
+OutputEnabled7_OutputMedium4=0
+OutputDefault7=0
+Configuration7_Name1=OutputConfigurationParameter1
+Configuration7_Item1=BoardEdgeRoutToolDia=2000000|GenerateBoardEdgeRout=False|GenerateDrilledSlotsG85=False|GenerateEIADrillFile=False|GenerateSeparatePlatedNonPlatedFiles=False|NumberOfDecimals=5|NumberOfUnits=2|OptimizeChangeLocationCommands=True|OriginPosition=Absolute|Record=DrillView|Units=Imperial|ZeroesMode=KeepLeadingAndTrailingZeroes
 
 [PublishSettings]
 OutputFilePath2=Project Outputs for Free Documents\Dragonflyte.PDF
@@ -151,7 +205,7 @@ ShowComponentParameters2=1
 GlobalBookmarks2=0
 PDFACompliance2=Disabled
 PDFVersion2=Default
-OutputFilePath3=Project Outputs for Free Documents\
+OutputFilePath3=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Boards\Dragonflyte\Project Outputs for Dragonflyte\
 ReleaseManaged3=1
 OutputBasePath3=Project Outputs for Dragonflyte
 OutputPathMedia3=
@@ -205,7 +259,7 @@ WmvQuality4=80
 [GeneratedFilesSettings]
 RelativeOutputPath2=Project Outputs for Free Documents\Dragonflyte.PDF
 OpenOutputs2=1
-RelativeOutputPath3=Project Outputs for Free Documents\
+RelativeOutputPath3=C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Boards\Dragonflyte\Project Outputs for Dragonflyte\
 OpenOutputs3=1
 AddToProject3=1
 TimestampFolder3=0
