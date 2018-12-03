@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Boards\Dragonflyte\Dragonflyte.PcbDoc
-Date     : 11/24/2018
-Time     : 1:06:44 AM
+Date     : 12/2/2018
+Time     : 7:39:49 PM
 
 Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
 Rule Violations :0
@@ -34,7 +34,7 @@ Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
    Violation between Board Outline Clearance(Outline Edge): (Collision < 10mil) Between Arc (366.181mil,902.047mil) on Bottom Overlay And Board Edge 
    Violation between Board Outline Clearance(Outline Edge): (5.664mil < 10mil) Between Arc (473.15mil,780.276mil) on Bottom Overlay And Board Edge 
    Violation between Board Outline Clearance(Outline Edge): (9.292mil < 10mil) Between Arc (709.055mil,186.771mil) on Top Overlay And Board Edge 
-   Violation between Board Outline Clearance(Cutout Edge): (Collision < 10mil) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Track (-626.273mil,740mil)(-555mil,740mil) on Power Plane (VCC) 
+   Violation between Board Outline Clearance(Cutout Edge): (Collision < 10mil) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Track (-626.273mil,744.078mil)(-524.336mil,744.078mil) on Power Plane (VCC) 
    Violation between Board Outline Clearance(Cutout Edge): (Collision < 10mil) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Track (-635mil,723.583mil)(-618.524mil,707.107mil) on Power Plane (VCC) 
    Violation between Board Outline Clearance(Cutout Edge): (Collision < 10mil) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Track (-660mil,632.045mil)(-652.045mil,640mil) on Power Plane (VCC) 
    Violation between Board Outline Clearance(Cutout Edge): (Collision < 10mil) Between Board Cutout (Multi-Layer)Region (0 hole(s)) Multi-Layer And Track (-690mil,475mil)(-690mil,625mil) on Power Plane (VCC) 
@@ -75,11 +75,9 @@ Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
    Violation between Board Outline Clearance(Outline Edge): (5.899mil < 10mil) Between Board Edge And Pad JP1-MT1(705mil,157.48mil) on Solder Side 
    Violation between Board Outline Clearance(Outline Edge): (5.419mil < 10mil) Between Board Edge And Pad JP1-MT2(705mil,-158mil) on Solder Side 
    Violation between Board Outline Clearance(Outline Edge): (1.887mil < 10mil) Between Board Edge And Text "C148" (395mil,805mil) on Bottom Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 10mil) Between Board Edge And Text "C155" (-488mil,789mil) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 10mil) Between Board Edge And Text "C161" (-451mil,804mil) on Bottom Overlay 
    Violation between Board Outline Clearance(Outline Edge): (8.675mil < 10mil) Between Board Edge And Text "C81" (730mil,-105mil) on Top Overlay 
-   Violation between Board Outline Clearance(Outline Edge): (Collision < 10mil) Between Board Edge And Text "L8" (-559mil,804mil) on Bottom Overlay 
    Violation between Board Outline Clearance(Outline Edge): (7.004mil < 10mil) Between Board Edge And Text "U10" (675mil,180mil) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (3.845mil < 10mil) Between Board Edge And Text "Y1" (435mil,780mil) on Bottom Overlay 
    Violation between Board Outline Clearance(Outline Edge): (6.89mil < 10mil) Between Board Edge And Track (102.362mil,-997.48mil)(118.11mil,-997.48mil) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (6.89mil < 10mil) Between Board Edge And Track (-118.11mil,-997.48mil)(-102.362mil,-997.48mil) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (6.89mil < 10mil) Between Board Edge And Track (118.11mil,-997.48mil)(118.11mil,-682.52mil) on Top Overlay 
@@ -100,7 +98,7 @@ Processing Rule : Board Clearance Constraint (Gap=0mil) (All)
    Violation between Board Outline Clearance(Outline Edge): (9.438mil < 10mil) Between Board Edge And Track (702.992mil,-579.488mil)(702.992mil,-418.071mil) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (9.439mil < 10mil) Between Board Edge And Track (-702.992mil,-579.488mil)(-702.992mil,-418.071mil) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (Collision < 10mil) Between Board Edge And Track (762.087mil,-134mil)(762.087mil,133.858mil) on Bottom Overlay 
-Rule Violations :69
+Rule Violations :67
 
 Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
 Rule Violations :0
@@ -160,6 +158,6 @@ Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (
 Rule Violations :0
 
 
-Violations Detected : 90
+Violations Detected : 88
 Waived Violations : 0
-Time Elapsed        : 00:00:11
+Time Elapsed        : 00:00:10
