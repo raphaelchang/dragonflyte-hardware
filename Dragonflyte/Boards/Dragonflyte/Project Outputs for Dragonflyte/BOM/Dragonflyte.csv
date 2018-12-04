@@ -59,7 +59,7 @@ Designator,Quantity,Manufacturer,PartNumber,PackageReference,Description,Mountin
 "U1","1","NXP","MCIMX6X3EVO10AB","BGA-400","IC MPU I.MX6SX 1GHZ 400MAPBGA","Surface Mount","Top"
 "U2, U3","2","Micron Technology","MT41K256M16TW-107","BGA-96","IC SDRAM 4GBIT 933MHZ 96FBGA","Surface Mount","Top, Bottom"
 "U4","1","Texas Instruments","TPS3808G12DRVR","WSON-6","","Surface Mount","Bottom"
-"U5","1","Winbond Electronics","W25N01GVZEIG","WSON-8","","Surface Mount","Top"
+"U5","1","Toshiba Memory America, Inc.","TC58CVG2S0HRAIG","WSON-8","IC FLASH 4G SPI 104MHZ 8WSON","Surface Mount","Top"
 "U6","1","Texas Instruments","TPS62291DRVR","WSON-6","Voltage Regulators - Switching Regulators 2.25MHz 1A Step-Down Cnvrtr 3.3V Output","Surface Mount","Bottom"
 "U7","1","Linear Technology","LTC3407EDD-3","SON-10","","Surface Mount","Bottom"
 "U8","1","Texas Instruments","TPS62130RGT","QFN-16","","Surface Mount","Top"
