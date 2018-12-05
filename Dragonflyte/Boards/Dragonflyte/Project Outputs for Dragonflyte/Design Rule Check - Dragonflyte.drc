@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Boards\Dragonflyte\Dragonflyte.PcbDoc
-Date     : 12/3/2018
-Time     : 9:29:05 PM
+Date     : 12/4/2018
+Time     : 7:07:16 PM
 
 Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
 Rule Violations :0
@@ -69,8 +69,7 @@ Processing Rule : Board Clearance Constraint (Gap=0mil) (OnLayer('Component Side
    Violation between Board Outline Clearance(Outline Edge): (5.419mil < 10mil) Between Board Edge And Pad JP1-MT2(705mil,-158mil) on Solder Side 
    Violation between Board Outline Clearance(Outline Edge): (9.26mil < 10mil) Between Board Edge And Track (637.5mil,-231.694mil)(640.87mil,-235.064mil) on Component Side 
    Violation between Board Outline Clearance(Outline Edge): (9.26mil < 10mil) Between Board Edge And Track (640.87mil,-285.311mil)(640.87mil,-235.064mil) on Component Side 
-   Violation between Board Outline Clearance(Outline Edge): (9.979mil < 10mil) Between Board Edge And Track (640mil,195.858mil)(640mil,339.914mil) on Inner Layer 2 
-Rule Violations :39
+Rule Violations :38
 
 Processing Rule : Length Constraint (Min=0mil) (Max=2250mil) (InNetClass('DRAM_CLK'))
 Rule Violations :0
@@ -130,6 +129,6 @@ Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (
 Rule Violations :0
 
 
-Violations Detected : 60
+Violations Detected : 59
 Waived Violations : 0
-Time Elapsed        : 00:00:07
+Time Elapsed        : 00:00:08
