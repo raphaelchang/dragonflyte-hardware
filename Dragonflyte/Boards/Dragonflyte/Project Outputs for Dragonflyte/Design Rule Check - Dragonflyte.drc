@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\rapha\Documents\Projects\dragonflyte-hardware\Dragonflyte\Boards\Dragonflyte\Dragonflyte.PcbDoc
 Date     : 12/4/2018
-Time     : 7:07:16 PM
+Time     : 11:16:40 PM
 
 Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
 Rule Violations :0
@@ -131,4 +131,4 @@ Rule Violations :0
 
 Violations Detected : 59
 Waived Violations : 0
-Time Elapsed        : 00:00:08
+Time Elapsed        : 00:00:11

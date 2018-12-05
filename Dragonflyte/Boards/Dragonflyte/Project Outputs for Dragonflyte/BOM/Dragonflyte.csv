@@ -26,7 +26,7 @@ Designator,Quantity,Manufacturer,PartNumber,PackageReference,Description,Mountin
 "D2","1","Toshiba","CUS08F30,H3F","SOD-323","","Surface Mount","Top"
 "JP1","1","Amphenol FCI","10118192-0001LF","USB - Micro B","","Surface Mount","Bottom"
 "JP2","1","JST Sales America, Inc.","60PS-JMDSS-G-1-TF","JMD-60","","Surface Mount","Top"
-"JP3","1","Hirose","BM28B0.6-40DS/2-0.35V(53)","BM28-0.35","Board to Board & Mezzanine Connectors 40P Receptacle Straight SMT","Surface Mount","Bottom"
+"JP3","1","Hirose","BM23PF0.8-40DS-0.35V(51)","BM23PF-0.35","CONN RCPT 0.35MM SMD 40POS","Surface Mount","Bottom"
 "L1","1","Murata","LQM21PN2R2MGHL","0805","2.2uH 20% 1.7A 0805","Surface Mount","Bottom"
 "L2, L3, L6, L7","4","Murata","LQM18PZ2R2MCHD","0603","2.2uH 20% 750mA 0603","Surface Mount","Bottom, Top"
 "L4, L8","2","Murata","DFE252012F-2R2M=P2","1008","2.2uH 20% 3.3A 1008, 1uH 20% 4.7A 1008","Surface Mount","Top, Bottom"
